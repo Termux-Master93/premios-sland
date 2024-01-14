@@ -5,12 +5,15 @@ import Intro from "../components/Intro.astro";
 import Bento from "../components/Bento.astro";
 import PreFooter from "../components/PreFooter.astro";
 import Footer from "../components/Footer.astro";
+import { getI18n } from "../i18n/";
+
+const {currentLocale = "es"} = Astro
+const i18n = getI18n({ currentLocale })
 ---
 
 <Layout
-	title="Premios Sland 2024 - Celebrando lo mejor del streaming y los creadores de contenido."
-	description="Descubre a los mejores creadores de contenido de España y Latinoamérica. ¡vota por tus favoritos! Celebra la innovación y el talento de Twitch, Youtube y más"
->
+	title={i18n.SEO_TITLE}
+	description={i18n.SEO_DESCRIPTION}>
 	<Video />
 	<main>
 		<Intro />
