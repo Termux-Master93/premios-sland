@@ -1,0 +1,78 @@
+---
+import InstagranIcon from "../icons/InstagranIcon.astro";
+import TwitterIcon from "../icons/TwitterIcon.astro";
+import RedditIcon from "../icons/RedditIcon.astro";
+---
+
+<footer class="bg-white dark:bg-[#0000004D] w-full max-w-[1400px] mx-auto mb-0">
+    <div class="p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-evenly">
+            <div class="-mt-11">
+                <img src="./logo.png" class="size-20" alt="logo de los ESLAND" />
+                <div class="flex mt-4 -ml-4 justify-center gap-x-2 items-center">
+                <InstagranIcon class="size-8" />
+                    <TwitterIcon class="size-8" />
+                    <RedditIcon class="size-8" />
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2
+                        class="mb-6 text-xl font-semibold text-gray-900 uppercase dark:text-white"
+                    >
+                        Legal
+                    </h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Aviso Legal</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Privacidad</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2
+                        class="mb-6 text-xl font-semibold text-gray-900 uppercase dark:text-white"
+                    >
+                        WEB MAP
+                    </h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Info</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Archivo</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2
+                        class="text-xl font-semibold text-gray-900 uppercase dark:text-white my-0"
+                    >
+                        PRODUCIDO POR:
+                    </h2>
+                    <img
+                        class="w-50 h-auto mt-0 pt-0"
+                        src="./UBIQ_LOGO.svg"
+                        alt="logo de UBIG_LOGO"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="border-gray-200 sm:mx-auto dark:border-gray-700" />
+    <div class="flex w-full mx-auto justify-center items-center py-2 mt-0">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            >© 2024 <a href="https://flowbite.com/" class="hover:underline"
+                >ESLAND™</a
+            >. Todos los derechos reservados por ESLAND.
+        </span>
+    </div>
+</footer>
