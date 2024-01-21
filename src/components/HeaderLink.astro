@@ -1,0 +1,41 @@
+---
+interface Props {
+    checkActive?: boolean;
+    href: string;
+    class?: string;
+}
+
+const { currentLocale = "es" } = Astro;
+const {
+    href,
+    class: className,
+    checkActive = true,
+    ...restOfProps
+} = Astro.props;
+const LOCALES: Record<string, { code: string; baseHref: string }> = {
+    ca: {
+        code: "ca",
+        baseHref: "/ca",
+    },
+    es: {
+        code: "es",
+        baseHref: "",
+    },
+};
+const baseHref = LOCALES[currentLocale].baseHref;
+const currentPath = Astro.url.pathname;
+const destination = `${baseHref}${href}`;
+const isActive = currentPath === destination && checkActive;
+---
+
+<a
+    href={destination}
+    class:list={[
+        className,
+        "border-b-2",
+        isActive ? "border-white" : "border-transparent",
+    ]}
+    {...restOfProps}
+>
+    <slot />
+</a>

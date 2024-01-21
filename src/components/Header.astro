@@ -1,16 +1,20 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+---
 
 <header
     id="header-nav"
     class="fixed w-full p-3 my-0 z-50 max-w-[1400px] mx-auto flex justify-around items-center"
 >
-    <nav class="flex gap-4 font-semibold">
+    <HeaderLink checkActive={false} href="/" class="">
         <img class="w-8" src="./logo.png" />
-        <ul class="flex gap-4 items-center text-xl">
-            <li class="hover:underline">Info</li>
-            <li class="hover:underline">Archivo</li>
-            <li class="hover:underline">Finalistas</li>
-        </ul>
-    </nav>
+    </HeaderLink>
+    <ul class="flex gap-4 items-center text-xl">
+        <HeaderLink href="/info">Info</HeaderLink>
+        <HeaderLink href="/archivo">Archivo</HeaderLink>
+        <HeaderLink href="/finalistas">Finalistas</HeaderLink>
+    </ul>
+
     <a
         class="flex justify-normal border rounded-full py-3 font-semibold border-white hover:bg-white hover:text-blue-950 duration-300 px-3"
         href="#"

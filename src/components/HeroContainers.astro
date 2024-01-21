@@ -1,0 +1,12 @@
+---
+interface Props {
+    img: string
+}
+const { img } = Astro.props
+---
+
+<div
+    style=`background-image: url(${img}); clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 50% 100%, 0 85%)`
+    class="bg-no-repeat bg-cover cp-v relative h-[98vh] w-full max-w-[100vw]"
+>
+</div>

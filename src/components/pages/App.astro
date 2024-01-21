@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Video from "../Video.astro";
+import Intro from "../Intro.astro";
+import Bento from "../Bento.astro";
+import PreFooter from "../PreFooter.astro";
+import Footer from "../Footer.astro";
+import { getI18n } from "../../i18n";
+
+const {currentLocale = "es"} = Astro
+const i18n = getI18n({ currentLocale })
+---
+
+<Layout
+	title={i18n.SEO_TITLE}
+	description={i18n.SEO_DESCRIPTION}>
+	<Video />
+	<main>
+		<Intro />
+		<Bento />
+		<PreFooter />
+	</main>
+	<Footer />
+</Layout>
