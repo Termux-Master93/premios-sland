@@ -1,10 +1,15 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import HeroContainers from "@components/HeroContainers.astro";
+import Button from "../Button.astro";
 ---
 
 <Layout title="archivo" description="archivo">
-    <HeroContainers 
-        img="/img/bg-archivo.webp"
-     />
+    <HeroContainers img="/img/bg-archivo.webp">
+        <h1 class="text-5xl font-semibold mb-20">Ediciones Anteriores</h1>
+        <Button 
+            class="animate-fade-up z-10"
+            url="#">Revive la Ultima Gala</Button>
+    </HeroContainers>
+    <main></main>
 </Layout>
