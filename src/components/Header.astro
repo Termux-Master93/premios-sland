@@ -1,5 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import Button from "./Button.astro";
 ---
 
 <header
@@ -14,11 +15,8 @@ import HeaderLink from "./HeaderLink.astro";
         <HeaderLink href="/archivo">Archivo</HeaderLink>
         <HeaderLink href="/finalistas">Finalistas</HeaderLink>
     </ul>
-
-    <a
-        class="flex justify-normal border rounded-full py-3 font-semibold border-white hover:bg-white hover:text-blue-950 duration-300 px-3"
-        href="#"
-    >
+    <Button class="animate-fade-up z-10" url="#">
         ENTRA EN LA ISLA ESLAND
-    </a>
+    </Button>
+   
 </header>
