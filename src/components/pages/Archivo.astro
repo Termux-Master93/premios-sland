@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import HeroContainers from "@components/HeroContainers.astro";
 import Button from "../Button.astro";
 import Numbers from "@components/Numbers.astro";
+import Gallery from "@components/Gallery.astro";
 ---
 
 <Layout title="archivo" description="archivo">
@@ -13,6 +14,8 @@ import Numbers from "@components/Numbers.astro";
             url="#">Revive la Ultima Gala</Button>
     </HeroContainers>
     <main>
+        <Gallery/>
+
         <Numbers/>
     </main>
 </Layout>
