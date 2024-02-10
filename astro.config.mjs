@@ -12,5 +12,8 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false // el español seria la raiz (/)  y el catalan seria /ca
     }
-  }
+  },
+  alias: {
+    '@/': './src/',
+  },
 });

@@ -1,21 +1,24 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import HeroContainers from "@components/HeroContainers.astro";
-import Button from "../Button.astro";
 import Numbers from "@components/Numbers.astro";
-import Gallery from "@components/Gallery.astro";
+import Editions from "@components/Editions.tsx";
+import Button from "../Button.tsx"
 ---
 
 <Layout title="archivo" description="archivo">
     <HeroContainers img="/img/bg-archivo.webp">
         <h1 class="text-5xl font-semibold mb-20 tracking-widest">Ediciones Anteriores</h1>
         <Button 
-            class="animate-fade-up z-10"
-            url="#">Revive la Ultima Gala</Button>
+            className="animate-fade-up z-10"
+            url="https://www.youtube.com/watch?v=1YmpPrqKP-g">
+            Revive la Ultima Gala
+        </Button>
     </HeroContainers>
     <main>
-        <Gallery/>
 
+        <Editions client:load/>
         <Numbers/>
+
     </main>
 </Layout>
