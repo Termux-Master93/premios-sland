@@ -1,0 +1,63 @@
+---
+import Layout from  "../../layouts/Layout.astro";
+import Button from "../Button";
+import SorteVotenIcon from "../../icons/SorteVotenIcon.astro";
+import CheckPecilIcon from "../../icons/CheckPencilIcon.astro";
+import PodiumIcon from "../../icons/PodiumIcon.astro";
+import TabButtonIcon from "../../icons/TabButtonIcon.astro";
+import ShareIcon from "../../icons/ShareIcon.astro";
+import ThinkBrainIcon from "../../icons/ThinkBrainIcon.astro";
+const bkg='vota-bkg.webp'
+---
+<Layout title="Vote" description="pagina de votaciones">
+    <section class="bg-no-repeat bg-cover relative pb-24 min-h-screen w-full max-w-[100vw]">
+        <img
+            class="absolute h-full animate-fade object-cover object-center animate-duration-1000 animate-ease-in-out -z-10"
+            src={`/${bkg}`}
+            alt="esland cover"
+            />
+        <div class="mx-auto flex flex-col max-w-7xl px-6 pt-40">
+            <h1 class="uppercase mb-10 text-left text-3xl lg:text-5xl font-bold tracking-wider leading-loose max-w-xl text-balance">las votaciones ya están aquí</h1>
+            <div class="mb-10">
+                <Button id="vote-button" url="#">
+                    ¡empezar con las votaciones!
+                </Button>
+            </div>
+            <p
+                class="max-w-3xl text-pretty text-2xl pl-4 font-extralight">
+                Ha llegado el momento más importante.<strong> Votar en la 3ª Edición de los Premios </strong>. Para que tus votos se contabilicen de forma correcta, te dejamos algunos consejos:
+            </p>
+
+            <ul class="flex flex-col gap-y-10 text-2xl pl-4 font-extralight">
+                <li class="flex gap-x-6 items-center">
+                    <SorteVotenIcon/>
+                    <span set:html="Vota, por orden de preferencia, hasta 4 nominados por categoría."/>
+                </li>
+                <li class="flex gap-x-6 items-center">
+                    <CheckPecilIcon/>
+                    <span set:html="No es obligatorio votar en cada categoría."/>
+                </li>
+                <li class="flex gap-x-6 items-center">
+                    <PodiumIcon/>
+                    <span set:html="No es obligatorio pero sí recomendable el uso del voto rankeado."/>
+                </li>
+                <li class="flex gap-x-6 items-center">
+                    <TabButtonIcon/>
+                    <span set:html="Una vez tengas clara tu elección, asegúrate de pulsar “enviar mis votos”."/>
+                </li>
+                <li class="flex gap-x-6 items-center">
+                    <ShareIcon/>
+                    <span set:html="Recuerda compartir tus votos en redes sociales."/>
+                </li>
+                <li class="flex gap-x-6 items-center">
+                    <ThinkBrainIcon/>
+                    <span set:html="Elige sabiamente y revisa tus votos, solo tienes una oportunidad."/>
+                </li>
+                <spa class="opacity-85 text-base mt-4">
+                    Las votaciones estarán abiertas hasta el domingo 14 de enero a las 24:00h (hora española)
+                </span>
+            </ul>
+        </div>
+
+    </section>
+</Layout>

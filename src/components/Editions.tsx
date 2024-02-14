@@ -25,7 +25,9 @@ export default function Editions({i18n}:{i18n:any}) {
                 }
 
             </div>
+            
             <Gallery i18n={i18n} edicion={edicion}/>
+            
         </>
     )
 }
