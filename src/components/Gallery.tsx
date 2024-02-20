@@ -1,6 +1,6 @@
 
 import 'photoswipe/style.css';
-import editionsInfo from './data/meta-gallery.json';
+import editionsInfo from '../data/meta-gallery.json';
 import Button from './Button';
 import { useState, useRef, useEffect } from 'preact/hooks';
 import "../components/styles/Gallery.css";

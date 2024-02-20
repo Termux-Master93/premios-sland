@@ -1,6 +1,6 @@
 import { useState } from "preact/hooks";
 import Gallery from "./Gallery";
-import editions from "./data/editions-info.json";
+import editions from "../data/editions-info.json";
 import styles from "./styles/Editions.module.css";
 export default function Editions({i18n}:{i18n:any}) {
     const [edicion, setEdition] = useState("1");
