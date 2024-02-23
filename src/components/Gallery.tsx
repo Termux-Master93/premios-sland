@@ -42,13 +42,13 @@ export default function Gallery({
       console.log('Masonry loaded');
     };
     init();
-  }, []);
+  }, [isExpanded]);
 
 
 
 const handleLoadMore = async (e: MouseEvent) => {
     e.preventDefault();
-    const res = await fetch(`/pages/api/gallery.json?edition=${1}&offset=${offset}`);
+    const res = await fetch(`api/gallery.json?edition=${1}&offset=${offset}`);
     const images = await res.json();
     const html = images.map((img: any, index: number) => {
       const imgIndex = index + offset;
@@ -131,7 +131,7 @@ const handleLoadMore = async (e: MouseEvent) => {
       <div className="text-center mx-auto">
         {!isExpanded && (
           <Button onClick={handleLoadMore} id='load-more' url='#'>
-            Cargar mas pe
+            Cargar más
           </Button>
         )}
       </div>
