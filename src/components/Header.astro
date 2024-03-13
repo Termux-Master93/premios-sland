@@ -1,6 +1,7 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import Button from "./Button.tsx";
+import LenguageSelector from "./LenguageSelector.astro";
 ---
 
 <header
@@ -14,7 +15,9 @@ import Button from "./Button.tsx";
         <HeaderLink href="/vota">Vota</HeaderLink>
         <HeaderLink href="/info">Info</HeaderLink>
         <HeaderLink href="/archivo">Archivo</HeaderLink>
+        <LenguageSelector/>
     </ul>
+
     <Button className="animate-fade-up z-10" url="#">
         ENTRA EN LA ISLA ESLAND
     </Button>
